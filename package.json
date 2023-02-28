@@ -1,0 +1,17 @@
+{
+  "name": "@sha3dev/imgproxy",
+  "version": "0.0.0",
+  "private": false,
+  "main": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint 'src/**'"
+  },
+  "dependencies": {
+    "@sha3dev/logger": "^0.0.1",
+    "create-hmac": "^1.1.7"
+  },
+  "devDependencies": {
+    "@sha3dev/eslint-config-custom": "*",
+    "@sha3dev/tsconfig": "*"
+  }
+}

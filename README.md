@@ -1,2 +1,0 @@
-# imgproxy
-ImgProxy helper

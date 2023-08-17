@@ -6,24 +6,31 @@ import createHmac from "create-hmac";
 import path from "path";
 
 /**
+ * consts
+ */
+
+/**
  * export
  */
 
-export class Imgproxy {
+export default class Imgproxy {
   /**
    * constructor
    */
-  constructor(private options: { baseUrl: string; key: string; salt: string; presets: string[]; extension?: string }) {}
+  constructor(
+    private options: { baseUrl: string; key: string; salt: string; presets: string[]; extension?: string; allowUnsigned?: boolean }
+  ) {}
+
   /**
    * private static : methods
    */
 
-  private static urlSafeBase64(url: string) {
-    Buffer.from(url).toString("base64").replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
+  private static urlSafeBase64(url: Buffer | string) {
+    return Buffer.from(url).toString("base64").replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   }
 
   private static hexDecode(hex: string) {
-    Buffer.from(hex, "hex");
+    return Buffer.from(hex, "hex");
   }
 
   /**

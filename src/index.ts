@@ -1,1 +1,3 @@
-export { default as User } from "./lib/user";
+import Imgproxy from "./lib/imgproxy";
+
+export default Imgproxy;

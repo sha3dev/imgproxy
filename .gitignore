@@ -27,9 +27,6 @@ yarn-error.log*
 .env
 .env.*
 
-# turbo
-.turbo
-
 # build
 build/**
 dist/**

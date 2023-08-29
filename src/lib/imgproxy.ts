@@ -18,7 +18,14 @@ export default class Imgproxy {
    * constructor
    */
   constructor(
-    private options: { baseUrl: string; key: string; salt: string; presets: string[]; extension?: string; allowUnsigned?: boolean }
+    private options: {
+      baseUrl: string;
+      key: string;
+      salt: string;
+      presets: string[];
+      extension?: string;
+      allowUnsigned?: boolean;
+    }
   ) {}
 
   /**
